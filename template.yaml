@@ -7,6 +7,9 @@ Resources:
     Properties:
       Handler: lambda_function.lambda_handler
       Runtime: python3.6
+      CodeUri: app.zip
+      MemorySize: 128
+      Timeout: 180
       Events:
         RestAPI:
           Type: Api
@@ -14,5 +17,3 @@ Resources:
             Path: /tictactoe
             Method: ANY
       Description: This is a serverless little game sample.
-      MemorySize: 128
-      Timeout: 180
